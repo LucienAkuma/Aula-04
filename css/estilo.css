@@ -1,0 +1,71 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px repeat(4,auto) 100px;
+}
+
+header .logo img{
+width: 55px;
+}
+
+header  img{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.corpo{
+    text-align: center;
+}
+
+.corpo img{
+    max-width: 300px;
+}
+
+.parceiros1, .parceiros2{ 
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.parceiros1 img, .parceiros2 img{ 
+margin: 10px 0;
+width: 120px;
+height: 50px;
+}
+
+.destaques{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.destaques img{
+    margin: 10px 0;
+    max-width: 300px;
+}
+
+@media(min-width:500px){
+body{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px repeat(3,auto) 100px;
+    grid-area: auto;
+    }
+}
+
+@media(min-width:100px){
+    body{
+        grid-template-columns: 1fr 3 fr 1fr;
+        grid-template-rows: 120px auto auto 100px;
+    }
+}
